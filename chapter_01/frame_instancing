@@ -1,0 +1,16 @@
+Frame instance
+
+2D Plot
+ <iframe src="https://www.geogebra.org/calculator/nuvugush/sfsb/true/" 
+    width="100%" 
+    height="600" 
+    scrolling="no" 
+    style="border:0px;" allowfullscreen></iframe> 
+    
+
+3D Plot
+ <iframe src="https://www.geogebra.org/3d/eeg29mta/sfsb/true/" 
+    width="100%" 
+    height="600" 
+    scrolling="no" 
+    style="border:0px;" allowfullscreen></iframe> 

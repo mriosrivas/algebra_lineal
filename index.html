@@ -8,11 +8,11 @@
         
         
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Manuel Algebra Lineal</title>
+        <title>Algebra Lineal</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
 
         <script src="js/jquery-1.10.2.min.js" defer></script>
         <script src="js/bootstrap.min.js" defer></script>
@@ -23,7 +23,7 @@
     <body class="homepage">
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">Manuel Algebra Lineal</a>
+                <a class="navbar-brand" href=".">Algebra Lineal</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,31 +34,47 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem active">
-                                <a href="." class="nav-link">Home</a>
+                                <a href="." class="nav-link">Inicio</a>
                             </li>
                             <li class="navitem">
-                                <a href="chapter_01/11_ecuaciones_lineales/" class="nav-link">1.1 Sistemas de Ecuaciones Lineales</a>
+                                <a href="programa_2020/" class="nav-link">Programación del Curso</a>
                             </li>
-                            <li class="navitem">
-                                <a href="chapter_01/12_reduccion_filas/" class="nav-link">1.2 Reducción por Filas</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="chapter_01/13_ecuaciones_vectoriales/" class="nav-link">1.3 Ecuaciones Vectoriales</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="chapter_01/14_ecuacion_matricial/" class="nav-link">1.4 Ecuación Matricial</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="chapter_01/15_conjuntos_sistemas_lineales/" class="nav-link">1.5 Conjuntos de Sistemas Lineales</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="chapter_01/17_independencia_lineal/" class="nav-link">1.7 Independencia Lineal</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="chapter_01/18_intro_transformaciones/" class="nav-link">1.8 Introducción a las Transformaciones</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="chapter_01/19_matriz_transformacion/" class="nav-link">1.9 Matriz Transformación</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">1. Sistemas Lineales <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="chapter_01/11_ecuaciones_lineales/" class="dropdown-item">1.1 Sistemas de Ecuaciones Lineales</a>
+</li>
+                                    
+<li>
+    <a href="chapter_01/12_reduccion_filas/" class="dropdown-item">1.2 Reducción por Filas</a>
+</li>
+                                    
+<li>
+    <a href="chapter_01/13_ecuaciones_vectoriales/" class="dropdown-item">1.3 Ecuaciones Vectoriales</a>
+</li>
+                                    
+<li>
+    <a href="chapter_01/14_ecuacion_matricial/" class="dropdown-item">1.4 Ecuación Matricial</a>
+</li>
+                                    
+<li>
+    <a href="chapter_01/15_conjuntos_sistemas_lineales/" class="dropdown-item">1.5 Conjuntos de Sistemas Lineales</a>
+</li>
+                                    
+<li>
+    <a href="chapter_01/17_independencia_lineal/" class="dropdown-item">1.7 Independencia Lineal</a>
+</li>
+                                    
+<li>
+    <a href="chapter_01/18_intro_transformaciones/" class="dropdown-item">1.8 Introducción a las Transformaciones</a>
+</li>
+                                    
+<li>
+    <a href="chapter_01/19_matriz_transformacion/" class="dropdown-item">1.9 Matriz Transformación</a>
+</li>
+                                </ul>
                             </li>
                         </ul>
 
@@ -74,7 +90,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="chapter_01/11_ecuaciones_lineales/" class="nav-link">
+                                <a rel="next" href="programa_2020/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -96,13 +112,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#welcome-to-mkdocs" class="nav-link">Welcome to MkDocs</a>
+            <li class="nav-item" data-level="1"><a href="#algebra-lineal" class="nav-link">Álgebra Lineal</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#commands" class="nav-link">Commands</a>
+            <li class="nav-item" data-level="2"><a href="#algebra-lineal-es" class="nav-link">Álgebra Lineal es</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-level="2"><a href="#quienes-la-usan" class="nav-link">¿Quienes la usan?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -113,21 +129,38 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<h1 id="algebra-lineal">Álgebra Lineal</h1>
+<h4 id="por-manuel-rios">por Manuel Ríos</h4>
+<p>Esta es una página en desarrollo por lo que pueden haber muchos errores, los cuales puedes <a href="mailto:mriosrivas@gmail.com">reportar</a>.</p>
+<h2 id="algebra-lineal-es">Álgebra Lineal es</h2>
+<p>Una rama de las matemáticas que estudia conceptos como:</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
+<li>Sistemas de ecuaciones lineal</li>
+<li>Vectores</li>
+<li>Matrices</li>
+<li>Espacios vectoriales</li>
+<li>Transformaciones lineales</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre></div>
+<h2 id="quienes-la-usan">¿Quienes la usan?</h2>
+<ul>
+<li>Matemáticos</li>
+<li>Físicos</li>
+<li>Ingenieros</li>
+<li>Computadoras</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Libro de Texto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="/book.jpg" /></td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://www.amazon.com/-/es/DAVID-C-LAY/dp/6073213980/ref=sr_1_8?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&amp;dchild=1&amp;keywords=algebra+lineal&amp;qid=1590186603&amp;sr=8-8">Álgebra Lineal y sus Aplicaciones</a></p></div>
             </div>
         </div>
 
@@ -213,5 +246,5 @@ docs/
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-05-22 02:19:02.597352+00:00
+Build Date UTC : 2020-05-23 00:06:40.252505+00:00
 -->

@@ -8,11 +8,11 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>1.3 Ecuaciones Vectoriales - Manuel Algebra Lineal</title>
+        <title>1.3 Ecuaciones Vectoriales - Algebra Lineal</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
         <script src="../../js/bootstrap.min.js" defer></script>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../..">Manuel Algebra Lineal</a>
+                <a class="navbar-brand" href="../..">Algebra Lineal</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,31 +34,47 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../.." class="nav-link">Home</a>
+                                <a href="../.." class="nav-link">Inicio</a>
                             </li>
                             <li class="navitem">
-                                <a href="../11_ecuaciones_lineales/" class="nav-link">1.1 Sistemas de Ecuaciones Lineales</a>
+                                <a href="../../programa_2020/" class="nav-link">Programación del Curso</a>
                             </li>
-                            <li class="navitem">
-                                <a href="../12_reduccion_filas/" class="nav-link">1.2 Reducción por Filas</a>
-                            </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">1.3 Ecuaciones Vectoriales</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../14_ecuacion_matricial/" class="nav-link">1.4 Ecuación Matricial</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../15_conjuntos_sistemas_lineales/" class="nav-link">1.5 Conjuntos de Sistemas Lineales</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../17_independencia_lineal/" class="nav-link">1.7 Independencia Lineal</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../18_intro_transformaciones/" class="nav-link">1.8 Introducción a las Transformaciones</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../19_matriz_transformacion/" class="nav-link">1.9 Matriz Transformación</a>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">1. Sistemas Lineales <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../11_ecuaciones_lineales/" class="dropdown-item">1.1 Sistemas de Ecuaciones Lineales</a>
+</li>
+                                    
+<li>
+    <a href="../12_reduccion_filas/" class="dropdown-item">1.2 Reducción por Filas</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">1.3 Ecuaciones Vectoriales</a>
+</li>
+                                    
+<li>
+    <a href="../14_ecuacion_matricial/" class="dropdown-item">1.4 Ecuación Matricial</a>
+</li>
+                                    
+<li>
+    <a href="../15_conjuntos_sistemas_lineales/" class="dropdown-item">1.5 Conjuntos de Sistemas Lineales</a>
+</li>
+                                    
+<li>
+    <a href="../17_independencia_lineal/" class="dropdown-item">1.7 Independencia Lineal</a>
+</li>
+                                    
+<li>
+    <a href="../18_intro_transformaciones/" class="dropdown-item">1.8 Introducción a las Transformaciones</a>
+</li>
+                                    
+<li>
+    <a href="../19_matriz_transformacion/" class="dropdown-item">1.9 Matriz Transformación</a>
+</li>
+                                </ul>
                             </li>
                         </ul>
 
@@ -141,7 +157,13 @@
 <script type="math/tex; mode=display">\boldsymbol{u} = \left[ \begin{matrix} 3\\ -1\end{matrix} \right] \;\;\;\;\;\;\; \boldsymbol{v} = \left[ \begin{matrix} 2\\ 2\end{matrix} \right] </script>
 </p>
 <p>Determine la suma de ambos vectores </p>
-<p><img alt="" src="/chapter_01/Graph_04.png" /></p>
+<p><a href="https://www.geogebra.org/calculator/nuvugush">Link en GeoGebra</a></p>
+<p><iframe src="https://www.geogebra.org/calculator/nuvugush" 
+    width="100%" 
+    height="600" 
+    scrolling="no" 
+    style="border:0px;" allowfullscreen></iframe> </p>
+<hr />
 <p>La regla del paralelogramo establece que $\boldsymbol{u}+\boldsymbol{v}$ es el cuarto vértice de un paralelogramo que se forma con los vectores $\boldsymbol{0}$ , $\boldsymbol{u}$ y $\boldsymbol{v}$. El vector $\boldsymbol{0}$ consiste en:
 <script type="math/tex; mode=display">\boldsymbol{0} = \left[ \begin{matrix} 0\\ 0\end{matrix} \right]</script>
 </p>
@@ -150,8 +172,12 @@
 <p>
 <script type="math/tex; mode=display">\boldsymbol{u} = \left[ \begin{matrix} 2\\ 3 \\4 \end{matrix} \right] </script>
 </p>
-<p><img alt="" src="/chapter_01/Graph_05.png" /></p>
-<p><a href="https://www.geogebra.org/3d/vpjgnnty">Link en GeoGebra</a></p>
+<p><a href="https://www.geogebra.org/3d/kfduqvtb">Link en GeoGebra</a></p>
+<p><iframe src="https://www.geogebra.org/3d/kfduqvtb" 
+    width="100%" 
+    height="600" 
+    scrolling="no" 
+    style="border:0px;" allowfullscreen></iframe> </p>
 <h3 id="vectores-en-mathbbrn">Vectores en $\mathbb{R}^n$</h3>
 <p>Los vectores en $\mathbb{R}^n$ son matrices columna $n \times 1$ con $n$ entradas.</p>
 <h4 id="propiedades-algebraicas-de-mathbbrn">Propiedades Algebraicas de $\mathbb{R}^n$</h4>
@@ -222,8 +248,12 @@ tiene solución.</p>
 <p>Supongamos a $\boldsymbol{u}$ y $\boldsymbol{v}$ en $\mathbb{R}^3$ , con $\boldsymbol{u}$ , $\boldsymbol{v}\neq \boldsymbol{0}$ $\wedge$ $\boldsymbol{u}\neq k\boldsymbol{v}$</p>
 <p>
 <script type="math/tex; mode=display">Gen\left\{ \boldsymbol{u},\boldsymbol{v}\right\}</script>  consiste en todos los múltiplos escalares de $\boldsymbol{u}$ y $\boldsymbol{v}$. </p>
-<p><img alt="" src="/chapter_01/Graph_07.png" /></p>
 <p><a href="https://www.geogebra.org/3d/eeg29mta">Link en GeoGebra</a></p>
+<p><iframe src="https://www.geogebra.org/3d/eeg29mta" 
+    width="100%" 
+    height="600" 
+    scrolling="no" 
+    style="border:0px;" allowfullscreen></iframe> </p>
 <hr />
 <p><strong>Ejemplo 2:</strong></p>
 <p>Dada la matriz $A=\left[\boldsymbol{a_1} \;\; \boldsymbol{a_2} \;\;\boldsymbol{a_3} \right]$ determine si $\boldsymbol{b}$ en <script type="math/tex">Gen \{ \boldsymbol{a_1}, \boldsymbol{a_2}, \boldsymbol{a_3}\}</script>
