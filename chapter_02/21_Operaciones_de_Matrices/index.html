@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>2.1 Operaciones de Matrices - Algebra Lineal</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Algebra Lineal</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../programa_2020/" class="nav-link">Programación del Curso</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">1. Sistemas Lineales <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../chapter_01/11_ecuaciones_lineales/" class="dropdown-item">1.1 Sistemas de Ecuaciones Lineales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/12_reduccion_filas/" class="dropdown-item">1.2 Reducción por Filas</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/13_ecuaciones_vectoriales/" class="dropdown-item">1.3 Ecuaciones Vectoriales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/14_ecuacion_matricial/" class="dropdown-item">1.4 Ecuación Matricial</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/15_conjuntos_sistemas_lineales/" class="dropdown-item">1.5 Conjuntos de Sistemas Lineales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/17_independencia_lineal/" class="dropdown-item">1.7 Independencia Lineal</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/18_intro_transformaciones/" class="dropdown-item">1.8 Introducción a las Transformaciones</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/19_matriz_transformacion/" class="dropdown-item">1.9 Matriz Transformación</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">2. Algebra de Matrices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">2.1 Operaciones de Matrices</a>
+</li>
+                                    
+<li>
+    <a href="../22_Inversa_de_una_Matriz/" class="dropdown-item">2.2 Inversa de una Matriz</a>
+</li>
+                                    
+<li>
+    <a href="../23_Caracterizaciones_de_Matrices_Invertibles/" class="dropdown-item">2.3 Caracterización de Matrices</a>
+</li>
+                                    
+<li>
+    <a href="../25_Factorizacion_de_Matrices/" class="dropdown-item">2.5 Factorización de Matrices</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../chapter_01/19_matriz_transformacion/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../22_Inversa_de_una_Matriz/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#2-algebra-de-matrices" class="nav-link">2. Álgebra de Matrices</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#21-operaciones-de-matrices" class="nav-link">2.1 Operaciones de Matrices</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="2-algebra-de-matrices">2. Álgebra de Matrices</h1>
+<h2 id="21-operaciones-de-matrices">2.1 Operaciones de Matrices</h2>
+<p>A continuación definiremos algunos conceptos:</p>
+<p>Supongamos la siguiente matriz  de $m \times n$</p>
+<p>
+<script type="math/tex; mode=display">A=\left [\begin{matrix} a_{11} & a_{12} & \dots & a_{1n} \\ a_{21} & a_{22} & \dots & a_{2n} \\ \vdots & \vdots & \vdots & \vdots \\ a_{m1} & a_{m2} & \dots & a_{mn} \end{matrix} \right ]</script>
+</p>
+<p>Llamamos <strong>entradas diagonales</strong> a los términos $a_{11}$, $a_{22}$, $a_{33}$, $\dots$ y éstos forman la <strong>diagonal principal</strong>.</p>
+<p>Existen 3 tipos de matrices de $n \times n$  de interés que se pueden analizar:</p>
+<table>
+<thead>
+<tr>
+<th>Matriz con Entradas Diagonales</th>
+<th>Matriz identidad</th>
+<th>Matriz Cero o Nula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<script type="math/tex; mode=display">A=\left[\begin{array}{cccc} * & 0 & \dots & 0\\ 0 & * & \dots & 0\\ \vdots & \vdots & \vdots & \vdots\\ 0 & 0 & \dots & * \end{array}\right]</script>
+</td>
+<td>
+<script type="math/tex; mode=display">I_n=\left[\begin{array}{cccc} 1 & 0 & \dots & 0\\ 0 & 1 & \dots & 0\\ \vdots & \vdots & \vdots & \vdots\\ 0 & 0 & \dots & 1 \end{array}\right]</script>
+</td>
+<td>
+<script type="math/tex; mode=display">O_n=\left[\begin{array}{cccc} 0 & 0 & \dots & 0\\ 0 & 0 & \dots & 0\\ \vdots & \vdots & \vdots & \vdots\\ 0 & 0 & \dots & 0 \end{array}\right]</script>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Igualdad de matrices:</strong> Dos matrices son iguales si tienen las mismas dimensiones $m \times n$ y las mismas entradas.</p>
+<h3 id="suma-de-matrices">Suma de Matrices</h3>
+<p>Las matrices deben de ser de la misma dimensión para poder realizar la suma de matrices. Se define término a término entre los términos de una matriz con otra.</p>
+<p>
+<script type="math/tex; mode=display"> A=\left[\begin{array}{ccc} 3 & -5 & -7\\ 2 & 1 & 9\\ -4 & 0 & 1 \end{array}\right] \;\;\;\;\;\; B=\left[\begin{array}{ccc} 1 & -3 & 0\\ 2 & -2 & 1\\ 3 & -1 & 7 \end{array}\right]</script>
+</p>
+<p><br></p>
+<p>
+<script type="math/tex; mode=display"> A+B=\left[\begin{array}{ccc} 4 & -8 & -7\\ 4 & -1 & 10\\ -1 & -1 & 8 \end{array}\right]</script>
+</p>
+<p>La suma de matrices no esta definida si las matrices tienen distintas dimensiones.</p>
+<h3 id="multiplicacion-por-escalares">Multiplicación por Escalares</h3>
+<p>
+<script type="math/tex; mode=display"> 3A=3\left[\begin{array}{ccc} 3 & -5 & -7\\ 2 & 1 & 9\\ -4 & 0 & 1 \end{array}\right]=\left[\begin{array}{ccc} 9 & -15 & -21\\ 6 & 3 & 27\\ -12 & 0 & 3 \end{array}\right]</script>
+</p>
+<h4 id="propiedades-de-la-suma-y-multiplicacion-por-escalares">Propiedades de la Suma y Multiplicación por Escalares</h4>
+<p>Sean $A$, $B$, $C$ matrices de $(m \times n)$ y $r$, $s$ escalares.</p>
+<ul>
+<li>$A+B=B+A$</li>
+<li>$(A+B)+C=A+(B+C)$</li>
+<li>$A+O=A$</li>
+<li>$r(A+B)=rA+rB$</li>
+<li>$(r+s)A=rA+sA$</li>
+<li>$r(sA)=(rs)A$</li>
+</ul>
+<h3 id="multiplicacion-de-matrices">Multiplicación de Matrices</h3>
+<h5 id="como-una-transformacion-de-matrices">Como una transformación de matrices</h5>
+<p>Podemos recordar que la matriz $A$ era una transformación o mapeo de un espacio a otro, con este concepto podemos extrapolar al caso de tener otra matriz $B$ tal que $BA$ como se muestra en la figura:</p>
+<p><img alt="" src="/chapter_02/Graph_01.png" /></p>
+<p>El producto $A(B\boldsymbol{x})$ es una composición de mapeos.</p>
+<h5 id="como-una-combinacion-lineal">Como una combinación lineal</h5>
+<p>Estaremos partiendo de la definición de combinación lineal con el producto matricial $A\boldsymbol{x}$</p>
+<p>
+<script type="math/tex; mode=display">A \boldsymbol{x}=\left[\boldsymbol{a_1} \boldsymbol{a_2} \boldsymbol{\dots} \boldsymbol{a_p} \right]\left[\begin{array}{c} x_1\\ x_2\\ \vdots \\x_3 \end{array}\right]=x_1\boldsymbol{a_1}+x_2\boldsymbol{a_2}+\dots +x_p\boldsymbol{a_p}</script>
+</p>
+<p>Ahora multiplicaremos por la matriz $B$ </p>
+<p>
+<script type="math/tex; mode=display">B(A \boldsymbol{x})=B(x_1\boldsymbol{a_1}+x_2\boldsymbol{a_2}+\dots +x_p\boldsymbol{a_p})</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\;\;\;\;\; \;\;\;\;\;\ =Bx_1\boldsymbol{a_1}+Bx_2\boldsymbol{a_2}+\dots +Bx_p\boldsymbol{a_p}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\;\;\;\;\; \;\;\;\;\;\ =x_1B\boldsymbol{a_1}+x_2B\boldsymbol{a_2}+\dots +x_pB\boldsymbol{a_p}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\;\;\;\;\; \;\;\;\;\;\ =\left[B\boldsymbol{a_1} B\boldsymbol{a_2} \boldsymbol{\dots} B\boldsymbol{a_p} \right]\left[\begin{array}{c} x_1\\ x_2\\ \vdots \\x_3 \end{array}\right]</script>
+</p>
+<p>Con esto se puede notar que el producto $AB =\left[B\boldsymbol{a_1} B\boldsymbol{a_2} \boldsymbol{\dots} B\boldsymbol{a_p} \right]$ con $A$ de $(m \times n)$ y $B$ de $(n \times p)$. Observe que el producto $B\boldsymbol{a_n}$ es una combinación lineal de las columnas de $B$ usando coeficientes de la columna correspondiente de $A$.</p>
+<hr />
+<p><strong>Ejemplo 1:</strong> Dadas las matrices $A$ y $B$ encuentre el producto de $AB$ como la combinación de las columnas de $A$ con los coeficientes de la columna correspondiente de $B$.</p>
+<p>
+<script type="math/tex; mode=display">A=\left[\begin{array}{cc} 2 & 3\\ 1 & -5 \end{array}\right] \;\;\;\;\; B=\left[\begin{array}{ccc} 4 & 3 & 6\\ 1 & -2 & 3 \end{array}\right]</script>
+</p>
+<p>Si sabemos que </p>
+<p>
+<script type="math/tex; mode=display"> AB = [A\boldsymbol{b_1} \;\;A\boldsymbol{b_2} \;\; A\boldsymbol{b_3}]</script> <br></p>
+<p>Se puede trabajar cada combinación de las columnas</p>
+<p>
+<script type="math/tex; mode=display">A\boldsymbol{b_1}=\left[\begin{array}{cc} 2 & 3\\ 1 & -5 \end{array}\right]\left[\begin{array}{c} 4\\ 1 \end{array}\right]=\left[\begin{array}{c} 11\\ -1 \end{array}\right] </script> <br></p>
+<p>
+<script type="math/tex; mode=display">A\boldsymbol{b_2}=\left[\begin{array}{cc} 2 & 3\\ 1 & -5 \end{array}\right]\left[\begin{array}{c} 3\\ -2 \end{array}\right]=\left[\begin{array}{c} 0\\ 13 \end{array}\right]</script> <br></p>
+<p>
+<script type="math/tex; mode=display">A\boldsymbol{b_3}=\left[\begin{array}{cc} 2 & 3\\ 1 & -5 \end{array}\right]\left[\begin{array}{c} 6\\ 3 \end{array}\right]=\left[\begin{array}{c} 21\\ -9 \end{array}\right]</script><br></p>
+<p>Finalmente el producto $AB$ será</p>
+<p>
+<script type="math/tex; mode=display"> AB =     \left[\begin{array}{ccc} 11 & 0 & 21\\ -1 & 13 & -9 \end{array}\right]</script> <br></p>
+<h4 id="regla-fila-columna">Regla Fila Columna</h4>
+<p>Sean $A$ de $(2 \times 2)$  y $B$ de $(2 \times 3)$ dos matrices como las que se muestran a continuación</p>
+<p>
+<script type="math/tex; mode=display">A=\left[\begin{array}{cc} a_{11} & a_{12}\\ a_{21} & a_{22} \end{array}\right] \;\;\;\;\; B=\left[\begin{array}{ccc} b_{11} & b_{12} & b_{13}\\ b_{21} & b_{22} & b_{23} \end{array}\right]</script> <br></p>
+<p>El producto $AB$ se puede calcular como</p>
+<p>
+<script type="math/tex; mode=display">AB=\left[\begin{array}{cc} a_{11} & a_{12}\\ a_{21} & a_{22} \end{array}\right] \left[\begin{array}{ccc} b_{11} & b_{12} & b_{13}\\ b_{21} & b_{22} & b_{23} \end{array}\right]=\left[\begin{array}{ccc} a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22} & a_{11}b_{13}+a_{12}b_{23}\\ a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22} & a_{21}b_{13}+a_{22}b_{23} \end{array}\right]</script>
+</p>
+<hr />
+<hr />
+<p><strong>Ejemplo 2:</strong></p>
+<p>Encuentre el producto $AB$ del <strong>Ejemplo 1</strong> por medio de la regla fila columna.</p>
+<hr />
+<h4 id="calculo-de-algunos-elementos-de-ab">Cálculo de algunos elementos de $AB$</h4>
+<ul>
+<li>
+<p>Definiremos la fila $i$ de una matriz $A$  como $\boldsymbol{a_{i,*}}$ o  $\boldsymbol{a_{i,:}}$ en la cual la segunda notación da preferencia a ser mejor interpretada en un lenguaje de programación.</p>
+</li>
+<li>
+<p>Usualmente hemos definido, la columna $j$ de $A$ como $\boldsymbol{a_{j}}$, sin embargo si deseamos mantener consistencia, también puede ser escrito como $\boldsymbol{a_{*,j}}$ o $\boldsymbol{a_{:,j}}$. </p>
+</li>
+<li>El elemento $i$, $j$ de la matriz $A$ se puede expresar como $a_{i,j}$.</li>
+</ul>
+<p>Esta representación dependerá mucho del contexto en que se usen.</p>
+<p>Sea $C=AB$ podemos calcular los siguientes valores:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><p style="text-align:center"><strong>Fila $i$ de $AB$</strong></p></th>
+<th align="center"><p style="text-align:center"><strong>Columna $j$ de $AB$</strong></p></th>
+<th align="center"><p style="text-align:center"><strong>Elemento $i$, $j$ de $AB$</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">
+<script type="math/tex; mode=display">\boldsymbol{c}_{i,:}=\boldsymbol{a_{i,:}}B</script>
+</td>
+<td align="center">
+<script type="math/tex; mode=display">\boldsymbol{c}_{:,j}=A\boldsymbol{b_{:,j}}</script>
+</td>
+<td align="center">$c_{i,j}=\boldsymbol{a_{i,:}}\boldsymbol{b_{:,j}}$</td>
+</tr>
+</tbody>
+</table>
+<h4 id="propiedades-de-la-multiplicacion-de-matrices">Propiedades de la Multiplicación de Matrices</h4>
+<p>Sea $A$ una matriz de $(m \times n)$, $B$ , $C$ matrices con tamaños adecuados y $r$ un escalar. Además sean $I_m$ e $I_n$ la matriz identidad de $(m \times m)$ y $(n \times n)$ respectivamente.</p>
+<ul>
+<li>$A(BC)=(AB)C$</li>
+<li>$A(B+C)=AB+AC$</li>
+<li>$(B+C)A=BA+CA$</li>
+<li>$r(AB)=(rA)B=A(rB)$</li>
+<li>$I_mA=A=AI_n$</li>
+</ul>
+<h4 id="advertencias">Advertencias</h4>
+<ol>
+<li>En forma general $AB \neq BA$, sin embargo si sucediera se dice que $A$ y $B$ son matrices que se conmutan.</li>
+<li>Si $AB=AC$ no implica que $B=C$.  No se pueden "cancelar" las matrices $A$.</li>
+<li>Si $AB=0$ no se puede concluir que $A=0$ o $B=0$.</li>
+</ol>
+<hr />
+<p><strong>Ejemplo 3:</strong></p>
+<p>Dadas la matriz $A$ y el producto $AB$ determine cuál es la matriz $B$</p>
+<p>
+<script type="math/tex; mode=display">A=\left[\begin{array}{cc} 1 & -3\\ -3 & 5 \end{array}\right] \;\;\;\;\; AB=\left[\begin{array}{cc} -3 & -11\\ 1 & 17 \end{array}\right]</script>
+</p>
+<hr />
+<h3 id="potencias-de-una-matriz">Potencias de una Matriz</h3>
+<p>Sea $A$ una matriz de $(n \times n)$ y $k$ un entero positivo</p>
+<p>
+<script type="math/tex; mode=display">A^k=A \cdot A \cdot A \cdots A=\Pi_kA</script>
+</p>
+<h3 id="transpuesta-de-una-matriz">Transpuesta de una Matriz</h3>
+<p>Sea una matriz $A$ de $(n \times m)$ su traspuesta es la matriz $A^T$ de $(m \times n)$ y está dado como</p>
+<p>
+<script type="math/tex; mode=display">A=\left [\begin{matrix} a_{11} & a_{12} & \dots & a_{1m} \\ a_{21} & a_{22} & \dots & a_{2m} \\ \vdots & \vdots & \vdots & \vdots \\ a_{n1} & a_{n2} & \dots & a_{nm} \end{matrix} \right ]</script>
+</p>
+<p>
+<script type="math/tex; mode=display">A^T=\left [\begin{matrix} a_{11} & a_{21} & \dots & a_{n1} \\ a_{12} & a_{22} & \dots & a_{n2} \\ \vdots & \vdots & \vdots & \vdots \\ a_{1m} & a_{2m} & \dots & a_{nm} \end{matrix} \right ]</script>
+</p>
+<hr />
+<p><strong>Ejemplo 4:</strong> Si se tiene la matriz $A$ encuentre su transpuesta</p>
+<p>
+<script type="math/tex; mode=display">A=\left[\begin{array}{cccc} 1 & 2 & 3 & 4\\ 5 & 6 & 7 & 8\\ 9 & 10 & 11 & 12 \end{array}\right]</script>
+</p>
+<p>
+<script type="math/tex; mode=display">A^T=\left[\begin{array}{ccc} 1 & 5 & 9\\ 2 & 6 & 10\\ 3 & 7 & 11\\ 4 & 8 & 12 \end{array}\right]</script>
+</p>
+<hr />
+<h4 id="propiedades-de-la-matriz-transpuesta">Propiedades de la Matriz Transpuesta</h4>
+<p>Sean $A$ y $B$ dos matrices de dimensiones adecuadas y $r$ un escalar.</p>
+<ul>
+<li>$(A^T)^T=A$</li>
+<li>$(A+B)^T=A^T+B^T$</li>
+<li>$(rA)^T=rA^T$</li>
+<li>$(AB)^T=B^TA^T$</li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>TAREA SECCIÓN 2.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1, 3, 5, 7, 11, 17, 23, 27, 31</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
