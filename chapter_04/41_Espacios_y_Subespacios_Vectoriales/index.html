@@ -164,6 +164,31 @@
 </li>
                                 </ul>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">6. Ortogonalidad y Mínimos Cuadrados <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../chapter_06/61_Producto_Interior_Longitud_Ortogonalidad/" class="dropdown-item">6.1 Producto Interior, Longitud y Ortogonalidad</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_06/62_Conjuntos_Ortogonales/" class="dropdown-item">6.2 Conjuntos Ortogonales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_06/63_Proyecciones_Ortogonales/" class="dropdown-item">6.3 Proyecciones Ortogonales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_06/64_Proceso_Gram_Schmidt/" class="dropdown-item">6.4 Proceso de Gram-Schmidt</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_06/65_Problemas_de_Minimos_Cuadrados/" class="dropdown-item">6.5 Problemas de Mínimos Cuadrados</a>
+</li>
+                                </ul>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
@@ -245,7 +270,7 @@
 <p><br></p>
 <h3 id="espacio-de-senales-discretas-en-el-tiempo">Espacio de Señales Discretas en el Tiempo</h3>
 <p>Una señal discreta o señal de tiempo discreto es una serie de tiempo que consiste en una secuencia de valores. A diferencia de una señal de tiempo continuo, una señal de tiempo discreto no es función de un argumento continuo; sin embargo, puede haber sido obtenido por muestreo de una señal de tiempo continuo. <a href="https://en.wikipedia.org/wiki/Discrete_time_and_continuous_time">Wikipedia</a> </p>
-<p>La figura muestra un ejemplo de una señal de tiempo discreta a una señal de audio muestreada a $44100$  $Hz$.</p>
+<p>La figura muestra un ejemplo de una señal de tiempo discreta paraa una señal de audio muestreada a $44100$  $Hz$.</p>
 <p><img src="/chapter_04/Graph_01.png" width="700" height="150"/></p>
 <p>Decimos que una señal discreta en el tiempo se encuentra definida en un espacio $\mathbb{S}$, el cual consiste en los números doblemente infinitos (negativos y positivos). Esta señal puede ser escrita como una secuencia de números</p>
 <p>
@@ -272,6 +297,9 @@
 <script type="math/tex; mode=display">c\{ l_k \} = (\dots, cl_{-2}, cl_{-1}, cl_0, cl_{1}, cl_{2}, \dots)</script>
 </p>
 <p>Todos los valores siguen estando en el espacio $\mathbb{S}$.<br></p>
+<p><a href="https://mybinder.org/v2/gh/mriosrivas/linear_algebra/master"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+<p><strong>Ejemplo 1:</strong> El siguiente ejemplo muestra como el concepto de Espacio Vectorial puede ser aplicada para comprender las señales discretas en el tiempo. Este ejemplo se encuentra en el archivo <code>signal_processing/fourier_analysis.ipynb</code> del repositorio de binder.</p>
+<p><br></p>
 <h3 id="espacio-vectorial-de-un-polinomio">Espacio Vectorial de un Polinomio</h3>
 <p>Para $n \gt 0$, el conjunto $\mathbb{P}_n$ de polinomios de grado $n$ o menor consiste en todos los polinomios de la forma</p>
 <p>
@@ -328,7 +356,7 @@
 
 <p>El término sub-espacio se utiliza cuando al menos dos espacios vectoriales están en mente, con uno dentro del otro, y la frase sub-espacio de $V$ identifica a $V$ como el espacio más grande. <br></p>
 <hr />
-<p><strong>Ejemplo 1:</strong> Determine si lo que se indica es verdadero o falso:</p>
+<p><strong>Ejemplo 2:</strong> Determine si lo que se indica es verdadero o falso:</p>
 <ol> 
     <li> El espacio $\mathbb{R}^2$ es un sub-espacio de $\mathbb{R}^3$ </li>
     <li> El espacio generado por $Gen\{\boldsymbol{v_1}, \boldsymbol{v_2}\}$ es un sub-espacio de $\mathbb{R}^3$: </li>
@@ -347,14 +375,14 @@
 </blockquote>
 <p><br></p>
 <hr />
-<p><strong>Ejemplo 2:</strong> Sea $W$ el conjunto de todos los vectores de la forma</p>
+<p><strong>Ejemplo 3:</strong> Sea $W$ el conjunto de todos los vectores de la forma</p>
 <p>
 <script type="math/tex; mode=display">W=\left[\begin{array}{c} 2\,s+4\,t\\ 2\,s\\ 2\,s-3\,t\\ 5\,t \end{array}\right]</script>
 </p>
 <p>Desmuestre que $W$ es un sub-espacio de $\mathbb{R}^4$</p>
 <hr />
 <hr />
-<p><strong>Ejemplo 3:</strong> Sean los vectores $\boldsymbol{v_1}$, $\boldsymbol{v_2}$, $\boldsymbol{v_3}$ y $\boldsymbol{w}$</p>
+<p><strong>Ejemplo 4:</strong> Sean los vectores $\boldsymbol{v_1}$, $\boldsymbol{v_2}$, $\boldsymbol{v_3}$ y $\boldsymbol{w}$</p>
 <p>
 <script type="math/tex; mode=display">\boldsymbol{v_1}=\left[\begin{array}{c} 1\\ 0\\ -1 \end{array}\right]\;\;\; \boldsymbol{v_2}=\left[\begin{array}{c} 2\\ 1\\ 3 \end{array}\right] \;\;\; \boldsymbol{v_3}=\left[\begin{array}{c} 4\\ 2\\ 6 \end{array}\right] \;\;\; \boldsymbol{w}=\left[\begin{array}{c} 3\\ 1\\ 2 \end{array}\right]</script> <br></p>
 <ol>
@@ -365,7 +393,7 @@
 <hr />
 <p><br></p>
 <hr />
-<p><strong>Ejemplo 4:</strong> Suponga que tiene la función</p>
+<p><strong>Ejemplo 5:</strong> Suponga que tiene la función</p>
 <p>
 <script type="math/tex; mode=display">y(t)=C_1\cos{(t)}+C_2 \sin{(t)}</script>
 </p>

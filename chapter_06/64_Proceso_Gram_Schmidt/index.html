@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>2.3 Caracterización de Matrices - Algebra Lineal</title>
+        <title>6.4 Proceso de Gram-Schmidt - Algebra Lineal</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -76,24 +76,24 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">2. Algebra de Matrices <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../21_Operaciones_de_Matrices/" class="dropdown-item">2.1 Operaciones de Matrices</a>
+    <a href="../../chapter_02/21_Operaciones_de_Matrices/" class="dropdown-item">2.1 Operaciones de Matrices</a>
 </li>
                                     
 <li>
-    <a href="../22_Inversa_de_una_Matriz/" class="dropdown-item">2.2 Inversa de una Matriz</a>
+    <a href="../../chapter_02/22_Inversa_de_una_Matriz/" class="dropdown-item">2.2 Inversa de una Matriz</a>
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">2.3 Caracterización de Matrices</a>
+    <a href="../../chapter_02/23_Caracterizaciones_de_Matrices_Invertibles/" class="dropdown-item">2.3 Caracterización de Matrices</a>
 </li>
                                     
 <li>
-    <a href="../25_Factorizacion_de_Matrices/" class="dropdown-item">2.5 Factorización de Matrices</a>
+    <a href="../../chapter_02/25_Factorizacion_de_Matrices/" class="dropdown-item">2.5 Factorización de Matrices</a>
 </li>
                                 </ul>
                             </li>
@@ -164,28 +164,28 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">6. Ortogonalidad y Mínimos Cuadrados <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../chapter_06/61_Producto_Interior_Longitud_Ortogonalidad/" class="dropdown-item">6.1 Producto Interior, Longitud y Ortogonalidad</a>
+    <a href="../61_Producto_Interior_Longitud_Ortogonalidad/" class="dropdown-item">6.1 Producto Interior, Longitud y Ortogonalidad</a>
 </li>
                                     
 <li>
-    <a href="../../chapter_06/62_Conjuntos_Ortogonales/" class="dropdown-item">6.2 Conjuntos Ortogonales</a>
+    <a href="../62_Conjuntos_Ortogonales/" class="dropdown-item">6.2 Conjuntos Ortogonales</a>
 </li>
                                     
 <li>
-    <a href="../../chapter_06/63_Proyecciones_Ortogonales/" class="dropdown-item">6.3 Proyecciones Ortogonales</a>
+    <a href="../63_Proyecciones_Ortogonales/" class="dropdown-item">6.3 Proyecciones Ortogonales</a>
 </li>
                                     
 <li>
-    <a href="../../chapter_06/64_Proceso_Gram_Schmidt/" class="dropdown-item">6.4 Proceso de Gram-Schmidt</a>
+    <a href="./" class="dropdown-item active">6.4 Proceso de Gram-Schmidt</a>
 </li>
                                     
 <li>
-    <a href="../../chapter_06/65_Problemas_de_Minimos_Cuadrados/" class="dropdown-item">6.5 Problemas de Mínimos Cuadrados</a>
+    <a href="../65_Problemas_de_Minimos_Cuadrados/" class="dropdown-item">6.5 Problemas de Mínimos Cuadrados</a>
 </li>
                                 </ul>
                             </li>
@@ -198,12 +198,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../22_Inversa_de_una_Matriz/" class="nav-link">
+                                <a rel="prev" href="../63_Proyecciones_Ortogonales/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../25_Factorizacion_de_Matrices/" class="nav-link">
+                                <a rel="next" href="../65_Problemas_de_Minimos_Cuadrados/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -225,9 +225,9 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#2-algebra-de-matrices" class="nav-link">2. Álgebra de Matrices</a>
+            <li class="nav-item" data-level="1"><a href="#6-ortogonalidad-y-minimos-cuadrados" class="nav-link">6. Ortogonalidad y Mínimos Cuadrados</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#23-caracterizaciones-de-matrices-invertibles" class="nav-link">2.3 Caracterizaciones de Matrices Invertibles</a>
+            <li class="nav-item" data-level="2"><a href="#64-proceso-de-gram-schmidt" class="nav-link">6.4 Proceso de Gram-Schmidt</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -238,123 +238,107 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="2-algebra-de-matrices">2. Álgebra de Matrices</h1>
-<h2 id="23-caracterizaciones-de-matrices-invertibles">2.3 Caracterizaciones de Matrices Invertibles</h2>
-<h4 id="el-teorema-de-la-matriz-invertible">El teorema de la matriz invertible</h4>
-<p>Sea $A$ una matriz cuadrada de $n \times n$. Entonces, los siguientes enunciados son equivalentes. Es decir, para una $A$ dada, los enunciados son todos ciertos o todos falsos.</p>
-<ol>
-<li>
-<p>$A$ es una matriz invertible.</p>
-</li>
-<li>
-<p>$A$ es equivalente por filas a la matriz identidad $I_n$</p>
-</li>
-<li>
-<p>$A$ tiene $n$ posiciones pivote.</p>
-</li>
-<li>
-<p>La ecuación $A\boldsymbol{x}=\boldsymbol{0}$ tiene solamente la solución trivial.</p>
-</li>
-<li>
-<p>Las columnas de $A$ forman un conjunto linealmente independiente.</p>
-</li>
-<li>
-<p>La transformación lineal $\boldsymbol{x}\rightarrow A\boldsymbol{x}$ es uno a uno.</p>
-</li>
-<li>
-<p>La ecuación $A\boldsymbol{x}=\boldsymbol{b}$ tiene al menos una solución para toda $\boldsymbol{b}$ en $\mathbb{R}^n$.</p>
-</li>
-<li>
-<p>Las columnas de $A$ generan $\mathbb{R}^n$.</p>
-</li>
-<li>
-<p>La transformación lineal $\boldsymbol{x}\rightarrow A\boldsymbol{x}$ mapea $\mathbb{R}^n$ sobre $\mathbb{R}^n$.</p>
-</li>
-<li>
-<p>Existe una matriz $C$ de $n \times n$ tal que $CA=I$,</p>
-</li>
-<li>
-<p>Existe una matriz $D$ de $n \times n$ tal que $AD= I$,</p>
-</li>
-<li>
-<p>$A^T$es una matriz invertible.</p>
-</li>
-</ol>
-<hr />
-<p><strong>Ejemplo 1:</strong></p>
-<p>Sea la matriz $A$ describa como cumple con el teorema de la matriz invertible.</p>
+<h1 id="6-ortogonalidad-y-minimos-cuadrados">6. Ortogonalidad y Mínimos Cuadrados</h1>
+<h2 id="64-proceso-de-gram-schmidt">6.4 Proceso de Gram-Schmidt</h2>
+<p>El proceso de Gram-Schmidt es un sencillo algoritmo para obtener una base ortogonal u ortonormal para cualquier subespacio diferente de cero de $\mathbb{R^n}$. </p>
+<p>A partir de una base {$\boldsymbol{x_1},\dots, \boldsymbol{x_p}$} para un subespacio $W$ de $\mathbb{R^n}$, se define</p>
 <p>
-<script type="math/tex; mode=display">A=\left[\begin{array}{cccc} 3 & 4 & 7 & 8\\ 0 & 1 & 4 & 6\\ 0 & 0 & 2 & 4\\ 0 & 0 & 0 & 1 \end{array}\right]</script>
-</p>
-<ol>
-<li>Al aplicar reducciones por fila se comprueba que $A$ tiene una matriz inversa</li>
-</ol>
-<p>
-<script type="math/tex; mode=display">A^{-1}=\left[\begin{array}{cccc} \frac{1}{3} & -\frac{4}{3} & \frac{3}{2} & -\frac{2}{3}\\ 0 & 1 & -2 & 2\\ 0 & 0 & \frac{1}{2} & -2\\ 0 & 0 & 0 & 1 \end{array}\right]</script>
-</p>
-<ol>
-<li>
-<p>Si tiene inversa se puede llevar a la forma $I_n$</p>
-</li>
-<li>
-<p>Se observa que en su forma escalonada tiene 4 posiciones pivote.</p>
-</li>
-<li>
-<p>Al tener 4 pivotes solo puede tener solución trivial.</p>
-</li>
-<li>
-<p>Las columnas de $A$ son linealmente independientes pues no se puede construir alguna columna de $A$ con la combinación de otras columnas de $A$.</p>
-</li>
-<li>
-<p>Cualquier vector $\boldsymbol{x}$ que sea multiplicado con $A$ para hacer $A\boldsymbol{x}$ será único.</p>
-</li>
-<li>
-<p>Cada valor de $\boldsymbol{b}$ es único, y debió de ser mapeado por $A$ como un vector $\boldsymbol{x}$.</p>
-</li>
-<li>
-<p>Al tener 4 pivotes en $A$ se comprueba que $A$ genera en $\mathbb{R}^4$.</p>
-</li>
-<li>
-<p>Tanto $\boldsymbol{x}$ como $A\boldsymbol{x}$ se encuentran en el mismo espacio $\mathbb{R}^4$.</p>
-</li>
-<li>
-<p>Al existir una inversa para $A$ existe una matriz $C=A^{-1}$ que hace que $CA=I$.</p>
-</li>
-<li>
-<p>Al existir una inversa para $A$ existe una matriz $D=A^{-1}$ que hace que $AD=I$.</p>
-</li>
-<li>
-<p>La matriz transpuesta de $A$ es</p>
-<p>
-<script type="math/tex; mode=display">A^T=\left[\begin{array}{cccc} 3 & 0 & 0 & 0\\ 4 & 1 & 0 & 0\\ 7 & 4 & 2 & 0\\ 8 & 6 & 4 & 1 \end{array}\right]</script>
-</p>
-<p>la cual cumple con tener 4 posiciones pivote por lo que cumple con tener inversa.</p>
-</li>
-</ol>
-<hr />
-<h3 id="trasformaciones-lineales-invertibles">Trasformaciones Lineales Invertibles</h3>
-<p><img src=/chapter_02/Graph_02.png class="center"> </p>
-<p>Se dice que una transformación lineal $T: \mathbb{R}^n \rightarrow \mathbb{R}^n$ es invertible si existe una función $S: \mathbb{R}^n \rightarrow \mathbb{R}^n$ tal que</p>
-<p>
-<script type="math/tex; mode=display"> S \left( T\left(\boldsymbol{x} \right)\right)=\boldsymbol{x}</script>
+<script type="math/tex; mode=display">\boldsymbol{v_1} = \boldsymbol{x_1}</script>
 </p>
 <p>
-<script type="math/tex; mode=display"> T \left( S\left(\boldsymbol{x} \right)\right)=\boldsymbol{x}</script>
+<script type="math/tex; mode=display">\boldsymbol{v_2} = \boldsymbol{x_2}-\frac{\boldsymbol{x_2 \cdot \boldsymbol{v_1}}}{\boldsymbol{v_1 \cdot \boldsymbol{v_1}}}\boldsymbol{v_1}</script>
 </p>
-<p>Además, como hemos definido a $T(\boldsymbol{x})=A\boldsymbol{x}$ </p>
 <p>
-<script type="math/tex; mode=display"> S \left( T\left(\boldsymbol{x} \right)\right)= S(A\boldsymbol{x})=A^{-1}A\boldsymbol{x}=I\boldsymbol{x}=\boldsymbol{x}</script>
+<script type="math/tex; mode=display">\boldsymbol{v_3} = \boldsymbol{x_3}-\frac{\boldsymbol{x_3 \cdot \boldsymbol{v_1}}}{\boldsymbol{v_1 \cdot \boldsymbol{v_1}}}\boldsymbol{v_1} -\frac{\boldsymbol{x_3 \cdot \boldsymbol{v_2}}}{\boldsymbol{v_2 \cdot \boldsymbol{v_2}}}\boldsymbol{v_2}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\vdots</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{v_p} = \boldsymbol{x_p}-\frac{\boldsymbol{x_p \cdot \boldsymbol{v_1}}}{\boldsymbol{v_1 \cdot \boldsymbol{v_1}}}\boldsymbol{v_1} -\frac{\boldsymbol{x_p \cdot \boldsymbol{v_2}}}{\boldsymbol{v_2 \cdot \boldsymbol{v_2}}}\boldsymbol{v_2}-\cdots-\frac{\boldsymbol{x_p \cdot \boldsymbol{v_{p-1}}}}{\boldsymbol{v_{p-1} \cdot \boldsymbol{v_{p-1}}}}\boldsymbol{v_{p-1}}</script>
 </p>
 <p><br></p>
+<h4 id="base-ortonormal">Base Ortonormal</h4>
+<p>Una base ortonormal se construye con facilidad a partir de una base ortogonal {$\boldsymbol{v_1},\dots, \boldsymbol{v_p}$} simplemente normalizando todas las $\boldsymbol{v_k}$, es decir</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u_k}=\frac{1}{\left\Vert \boldsymbol{v_k} \right\Vert}\boldsymbol{v_k}</script>
+</p>
+<hr />
+<p><strong>Ejemplo 1:</strong> Dados los vectores $\boldsymbol{x_1} $, $\boldsymbol{x_2}$, $\boldsymbol{x_3}$ que forman una base para $W$, encuentre:</p>
+<ol>
+<li>Una base ortogonal para $W$.</li>
+<li>Una base ortonormal para $W$.</li>
+</ol>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{x_1}=\left[\begin{array}{c} 1\\ 0\\ 1\\ 1\\ 0 \end{array}\right]\;\;\; \boldsymbol{x_2}=\left[\begin{array}{c} 0\\ 0\\ 1\\ 0\\ 1 \end{array}\right] \;\;\; \boldsymbol{x_3}=\left[\begin{array}{c} 1\\ 1\\ 0\\ 1\\ 1 \end{array}\right]</script>
+</p>
+<hr />
+<p><br></p>
+<hr />
+<p><strong>Ejemplo 2:</strong> Dados los vectores $\boldsymbol{x_1} $, $\boldsymbol{x_2}$, $\boldsymbol{x_3}$ que forman una base para $W$, encuentre una base ortogonal para $W$, luego implemente este algoritmo en python.</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{x_1}=\left[\begin{array}{c} 9\\ 0\\ 6\\ -7 \end{array}\right]\;\;\; \boldsymbol{x_2}=\left[\begin{array}{c} -1\\ 8\\ 6\\ 9 \end{array}\right] \;\;\; \boldsymbol{x_3}=\left[\begin{array}{c} 3\\ -9\\ 7\\ 8 \end{array}\right]</script>
+</p>
+<hr />
+<p><br></p>
+<iframe height="400px" width="100%" src="https://repl.it/@mriosrivas/gramschmidttresvectores?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p><br></p>
+<h4 id="algoritmo-en-software-del-proceso-de-gram-schmidt">Algoritmo en Software del Proceso de Gram-Schmidt</h4>
+<p>El siguiente bloque de código presenta la implementación del algoritmo del Proceso de Gram-Schmidt en Python. El costo de este algoritmo es de $\mathcal{O}(nk^2)$ operaciones de punto flotante, donde $n$ es el número de filas y $k$ el número de columnas de la matriz $V$ a encontrar una base ortonormal.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@mriosrivas/gramschmidt?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+<p><br></p>
+<h4 id="factorizacion-qr">Factorización QR</h4>
+<p>Si $A$ es una matriz de $m \times n$ con columnas linealmente independientes, entonces $A$ se puede factorizar como $A = QR$, donde $Q$ es una matriz de $m \times n$ cuyas columnas forman una base ortonormal para $\mathbf{Col} A$, y $R$ es una matriz triangular superior invertible de $n \times n$ con entradas positivas en su diagonal.</p>
+<p>Para comprender la validez de la factorización $QR$ puede considerar que el espacio de $\mathbf{Col}A$ debe de ser generado tanto por las columnas de $A$ como por las columnas de $Q$, por lo que si $A=[\boldsymbol{x_1}, \boldsymbol{x_2}, \cdots, \boldsymbol{x_n}]$ y $Q=[\boldsymbol{u_1}, \boldsymbol{u_2}, \cdots, \boldsymbol{u_n}]$ entonces</p>
+<p>
+<script type="math/tex; mode=display">Gen=\{\boldsymbol{x_1}, \boldsymbol{x_2}, \cdots, \boldsymbol{x_n}\}=Gen=\{\boldsymbol{u_1}, \boldsymbol{u_2}, \cdots, \boldsymbol{u_n}\}</script>
+</p>
+<p>Esto sugiere además que debe de ser valido lo siguiente</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{x_1}=r_{11}\boldsymbol{u_1}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{x_2}=r_{12}\boldsymbol{u_1} + r_{22}\boldsymbol{u_2}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{x_3}=r_{13}\boldsymbol{u_1} + r_{23}\boldsymbol{u_2} + r_{33}\boldsymbol{u_3}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\vdots</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{x_n}=r_{1n}\boldsymbol{u_1} + r_{2n}\boldsymbol{u_2} +\dots + r_{nn}\boldsymbol{u_n}</script>
+</p>
+<p>O de una forma matricial</p>
+<p>
+<script type="math/tex; mode=display">[\boldsymbol{u_1} \; \boldsymbol{u_2}\; \cdots \; \boldsymbol{u_n}]\left[\begin{array}{ccccc} r_{11} & r_{12} & r_{13} & \dots & r_{1n}\\ 0 & r_{22} & r_{23} & \cdots & r_{2n}\\ 0 & 0 & r_{33} & \cdots & r_{3n}\\ \vdots & \vdots & \vdots & \cdots & \vdots\\ 0 & 0 & 0 & 0 & r_{nn} \end{array}\right]</script>
+</p>
+<p><br></p>
+<p>Observe que al conocer $Q$ es posible determinar $R$ del hecho de que $Q$ es ortonormal cumple con $Q^TQ=I$ por lo que</p>
+<p>
+<script type="math/tex; mode=display">A=QR</script>
+</p>
+<p>
+<script type="math/tex; mode=display">Q^TA=Q^TQR</script>
+</p>
+<p>
+<script type="math/tex; mode=display">Q^TA=R</script>
+</p>
+<p><br></p>
+<p>El siguiente código presenta como implementar la factorización $QR$ en python.</p>
+<iframe height="400px" width="100%" src="https://repl.it/@mriosrivas/factorizacionqr?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
 <table>
 <thead>
 <tr>
-<th>TAREA SECCIÓN 2.3</th>
+<th>TAREA SECCIÓN 6.4</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>1, 3, 7, 33, 34, 39</td>
+<td></td>
 </tr>
 </tbody>
 </table></div>

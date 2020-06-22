@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>6.1 Producto Interior, Longitud y Ortogonalidad - Algebra Lineal</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-dune-light.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Algebra Lineal</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Inicio</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../programa_2020/" class="nav-link">Programación del Curso</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">1. Sistemas Lineales <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../chapter_01/11_ecuaciones_lineales/" class="dropdown-item">1.1 Sistemas de Ecuaciones Lineales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/12_reduccion_filas/" class="dropdown-item">1.2 Reducción por Filas</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/13_ecuaciones_vectoriales/" class="dropdown-item">1.3 Ecuaciones Vectoriales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/14_ecuacion_matricial/" class="dropdown-item">1.4 Ecuación Matricial</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/15_conjuntos_sistemas_lineales/" class="dropdown-item">1.5 Conjuntos de Sistemas Lineales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/17_independencia_lineal/" class="dropdown-item">1.7 Independencia Lineal</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/18_intro_transformaciones/" class="dropdown-item">1.8 Introducción a las Transformaciones</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_01/19_matriz_transformacion/" class="dropdown-item">1.9 Matriz Transformación</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">2. Algebra de Matrices <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../chapter_02/21_Operaciones_de_Matrices/" class="dropdown-item">2.1 Operaciones de Matrices</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_02/22_Inversa_de_una_Matriz/" class="dropdown-item">2.2 Inversa de una Matriz</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_02/23_Caracterizaciones_de_Matrices_Invertibles/" class="dropdown-item">2.3 Caracterización de Matrices</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_02/25_Factorizacion_de_Matrices/" class="dropdown-item">2.5 Factorización de Matrices</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">3. Determinantes <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../chapter_03/31_Introduccion_a_los_Determinantes/" class="dropdown-item">3.1 Introducción a los Determinantes</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_03/32_Propiedades_de_los_Determinantes/" class="dropdown-item">3.2 Propiedades de los Determinantes</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_03/33_%C3%81rea_Volumen_Regla_de_Cramer_Matriz_Adjunta_Transformaciones_Lineales/" class="dropdown-item">3.3 Área-Volumen, Regla de Cramer, Matriz Adjunta y Transformaciones Lineales</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">4. Espacios Vectoriales <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../chapter_04/41_Espacios_y_Subespacios_Vectoriales/" class="dropdown-item">4.1 Espacios y Sub-Espacios Vectoriales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_04/42_Espacios_Nulo_Columnas_Transformaciones_Lineales/" class="dropdown-item">4.2 Espacios Nulos, Espacios Columna y Transformaciones Lineales</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_04/43_Conjuntos_Linealmente_Independientes/" class="dropdown-item">4.3 Conjuntos Linealmente Independientes</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_04/44_Sistemas_de_Coordenadas/" class="dropdown-item">4.4 Sistemas de Coordenadas</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_04/45_La_Dimension_de_un_Espacio_Vectorial/" class="dropdown-item">4.5 La Dimensión de un Espacio Vectorial</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_04/46_Rango/" class="dropdown-item">4.6 Rango</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_04/49_Cadenas_de_Markov/" class="dropdown-item">4.9 Cadenas de Markov</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">5. Vectores Propios y Valores Propios <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../chapter_05/51_Vectores_Propios_Valores_Propios/" class="dropdown-item">5.1 Vectores Propios y Valores Propios</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_05/52_La_Ecuacion_Caracteristica/" class="dropdown-item">5.2 La Ecuación Característica</a>
+</li>
+                                    
+<li>
+    <a href="../../chapter_05/53_Diagonalizacion/" class="dropdown-item">5.3 Diagonalización</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">6. Ortogonalidad y Mínimos Cuadrados <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">6.1 Producto Interior, Longitud y Ortogonalidad</a>
+</li>
+                                    
+<li>
+    <a href="../62_Conjuntos_Ortogonales/" class="dropdown-item">6.2 Conjuntos Ortogonales</a>
+</li>
+                                    
+<li>
+    <a href="../63_Proyecciones_Ortogonales/" class="dropdown-item">6.3 Proyecciones Ortogonales</a>
+</li>
+                                    
+<li>
+    <a href="../64_Proceso_Gram_Schmidt/" class="dropdown-item">6.4 Proceso de Gram-Schmidt</a>
+</li>
+                                    
+<li>
+    <a href="../65_Problemas_de_Minimos_Cuadrados/" class="dropdown-item">6.5 Problemas de Mínimos Cuadrados</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../../chapter_05/53_Diagonalizacion/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../62_Conjuntos_Ortogonales/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#6-ortogonalidad-y-minimos-cuadrados" class="nav-link">6. Ortogonalidad y Mínimos Cuadrados</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#61-producto-interior-longitud-y-ortogonalidad" class="nav-link">6.1 Producto Interior, Longitud y Ortogonalidad</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="6-ortogonalidad-y-minimos-cuadrados">6. Ortogonalidad y Mínimos Cuadrados</h1>
+<h2 id="61-producto-interior-longitud-y-ortogonalidad">6.1 Producto Interior, Longitud y Ortogonalidad</h2>
+<h4 id="producto-interior-o-producto-punto">Producto Interior o Producto Punto</h4>
+<p>Suponga que tiene dos vectores $\boldsymbol{u}$ y $\boldsymbol{v}$ de $n \times 1$. </p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}=\left[\begin{array}{c} u_{1}\\ u_{2}\\ \vdots\\ u_{n} \end{array}\right] \;\;\; \boldsymbol{v}=\left[\begin{array}{c} v_{1}\\ v_{2}\\ \vdots\\ v_{n} \end{array}\right]</script>
+</p>
+<p>El producto interior se define como</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u} \cdot \boldsymbol{v}=\boldsymbol{u}^T \boldsymbol{v}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u} \cdot \boldsymbol{v}=\left[\begin{array}{cccc} u_{1} & \cdots & u_{2} & u_{n} \end{array}\right]\left[\begin{array}{c} v_{1}\\ v_{2}\\ \vdots\\ v_{n} \end{array}\right]</script>
+</p>
+<p><br></p>
+<hr />
+<p><strong>Ejemplo 1:</strong> Dados los vectores $\boldsymbol{u}$ y $\boldsymbol{v}$ , encuentre:</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}=\left[\begin{array}{c} 3\\ -1\\ 4 \end{array}\right] \;\;\; \boldsymbol{v}=\left[\begin{array}{c} -6\\ 7\\ 0 \end{array}\right]</script>
+</p>
+<ul>
+<li>El producto interior $\boldsymbol{u} \cdot \boldsymbol{v}$ </li>
+<li>El producto interior $\boldsymbol{v} \cdot \boldsymbol{u}$.</li>
+</ul>
+<p><br></p>
+<ul>
+<li>Producto interior $\boldsymbol{u} \cdot \boldsymbol{v}$ </li>
+</ul>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u} \cdot \boldsymbol{v}=\left[\begin{array}{ccc} 3 & -1 & 4 \end{array}\right]\left[\begin{array}{c} -6\\ 7\\ 0 \end{array}\right]=-18-7+0=-25</script>
+</p>
+<ul>
+<li>Producto interior $\boldsymbol{v} \cdot \boldsymbol{u}$ </li>
+</ul>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{v} \cdot \boldsymbol{u}=\left[\begin{array}{ccc} -6 & 7 & 0 \end{array}\right]\left[\begin{array}{c} 3\\ -1\\ 4 \end{array}\right]=-18-7+0=-25</script>
+</p>
+<p><br></p>
+<p>Como puede observar el producto interior cumple con la propiedad conmutativa.</p>
+<hr />
+<p><br></p>
+<h5 id="propiedades-del-producto-interior">Propiedades del Producto Interior</h5>
+<p>Sean $\boldsymbol{u}$, $\boldsymbol{v}$ y  $\boldsymbol{w}$ tres vectores y $c$ un escalar</p>
+<ol>
+<li>$\boldsymbol{u} \cdot \boldsymbol{v}=\boldsymbol{v} \cdot \boldsymbol{u}$</li>
+<li>$(\boldsymbol{u}+\boldsymbol{v})\cdot \boldsymbol{w}=\boldsymbol{u} \cdot \boldsymbol{w}+\boldsymbol{v} \cdot \boldsymbol{w}$ </li>
+<li>$(c\boldsymbol{u})\cdot \boldsymbol{v}=c(\boldsymbol{u}\cdot \boldsymbol{v})=\boldsymbol{u}\cdot (c\boldsymbol{v})$</li>
+<li>$\boldsymbol{u} \cdot \boldsymbol{u} \ge 0 \;\;\; \wedge \;\;\;\boldsymbol{u} \cdot \boldsymbol{u}=0 \iff\boldsymbol{u}=0 $</li>
+</ol>
+<p><br></p>
+<h4 id="longitud-o-norma">Longitud o Norma</h4>
+<p>Suponga que tiene un vector $\boldsymbol{u}$  de $n \times 1$, la longitud o norma del vector se define como</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u} \right\Vert=\sqrt{\boldsymbol{u}\cdot \boldsymbol{u}}=\sqrt{u_1^2+u_2^2+\cdots u_n^2}</script>
+</p>
+<p><br></p>
+<p>En muchas ocasiones también es de utilidad encontrar</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u} \right\Vert^2=\boldsymbol{u}\cdot \boldsymbol{u}</script>
+</p>
+<p><br></p>
+<hr />
+<p><strong>Ejemplo 2:</strong> Dados los vectores $\boldsymbol{u}$ y $\boldsymbol{v}$ , encuentre:</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}=\left[\begin{array}{c} 3\\ -1\\ 4 \end{array}\right] \;\;\; \boldsymbol{v}=\left[\begin{array}{c} -6\\ 7\\ 0 \end{array}\right]</script>
+</p>
+<ul>
+<li>La longitud de $\boldsymbol{u}$</li>
+<li>La longitud de $\boldsymbol{v}$</li>
+</ul>
+<p><br></p>
+<ul>
+<li>La longitud de $\boldsymbol{u}$ estará dado por</li>
+</ul>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u} \right\Vert=\sqrt{\left[\begin{array}{ccc} 3 & -1 & 4 \end{array}\right] \cdot\left[\begin{array}{c} 3\\ -1\\ 4 \end{array}\right]}=\sqrt{9+1+16}=\sqrt{26}\approx5.1</script>
+</p>
+<ul>
+<li>La longitud de $\boldsymbol{v}$ estará dado por</li>
+</ul>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{v} \right\Vert=\sqrt{\left[\begin{array}{ccc} -6 & 7 & 0 \end{array}\right] \cdot\left[\begin{array}{c} -6\\ 7\\ 0 \end{array}\right]}=\sqrt{36+49+0}=\sqrt{85}\approx9.2</script>
+</p>
+<p><br></p>
+<h4 id="vector-unitario">Vector Unitario</h4>
+<p>Un vector unitario es aquel cuya longitud es igual a uno. Es decir </p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u} \right\Vert=\sqrt{\boldsymbol{u}\cdot \boldsymbol{u}}=\sqrt{u_1^2+u_2^2+\cdots u_n^2}=1</script>
+</p>
+<p><br></p>
+<h5 id="normalizacion-de-un-vector">Normalización de un Vector</h5>
+<p>Un vector $\boldsymbol{v}$ que no sea unitario pude convertirse en unitario si se divide por su longitud de la siguiente manera</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}= \frac{1}{\left\Vert \boldsymbol{v} \right\Vert}\boldsymbol{v}</script>
+</p>
+<p><br></p>
+<hr />
+<p><strong>Ejemplo 3:</strong> Sea $W$ el espacio $\mathbb{R}^4$ generado por $\boldsymbol{v}$, obtenga un vector unitario que sea base para $W$</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{v}=\left[\begin{array}{c} 1\\ 3\\ 5\\ -1 \end{array}\right]</script>
+</p>
+<p><br></p>
+<p>Para obtener la normalización es necesario encontrar la longitud de $\boldsymbol{v}$ por lo que será</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{v} \right\Vert = \sqrt{1+9+25+1}=6</script>
+</p>
+<p>Por lo que el vector unitario $\boldsymbol{u}$ será</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}=\frac{1}{6}\left[\begin{array}{c} 1\\ 3\\ 5\\ -1 \end{array}\right]=\left[\begin{array}{c} 0.167\\ 0.500\\ 0.833\\ -0.167 \end{array}\right]</script>
+</p>
+<h5 id="distancia-entre-vectores">Distancia entre Vectores</h5>
+<p>Para dos vectores $\boldsymbol{u}$ y $\boldsymbol{v}$ en $\mathbb{R}^n$, la distancia entre estos vectores es la longitud del vector $\boldsymbol{u}-\boldsymbol{v}$, es decir</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}=\left[\begin{array}{c} u_{1}\\ u_{2}\\ \vdots\\ u_{n} \end{array}\right] \;\;\; \boldsymbol{v}=\left[\begin{array}{c} v_{1}\\ v_{2}\\ \vdots\\ v_{n} \end{array}\right]</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\mathbf{dist}(\boldsymbol{u},\boldsymbol{v})=\left\Vert \boldsymbol{u}-\boldsymbol{v} \right\Vert </script>
+</p>
+<p>
+<script type="math/tex; mode=display">\mathbf{dist}(\boldsymbol{u},\boldsymbol{v})=\sqrt{(u_1-v_1)^2+(u_2-v_2)^2+\cdots+(u_n-v_n)^2}</script>
+</p>
+<p><br></p>
+<hr />
+<p><strong>Ejemplo 4:</strong> ¿Cuál es la distancia entre  $\boldsymbol{u}$ y $\boldsymbol{v}$?</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}=\left[\begin{array}{c} 0\\ -5\\ 2 \end{array}\right] \;\;\; \boldsymbol{v}=\left[\begin{array}{c} -4\\ -1\\ 8 \end{array}\right]</script>
+</p>
+<p><br></p>
+<p>La distancia entre estos vectores será</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}-\boldsymbol{v}=\left[\begin{array}{c} 0\\ -5\\ 2 \end{array}\right]-\left[\begin{array}{c} -4\\ -1\\ 8 \end{array}\right]=\left[\begin{array}{c} 4\\ -4\\ -6 \end{array}\right]</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u}-\boldsymbol{v} \right\Vert=\sqrt{16+16+36}=\sqrt{68} \approx 8.25</script>
+</p>
+<p><br></p>
+<h4 id="vectores-ortogonales">Vectores Ortogonales</h4>
+<p>En el siguiente apartado encontraremos la condición que se debe de cumplir para que dos vectores sean ortogonales. Comenzaremos por definir  geométricamente nuestro problema.</p>
+<p>Se tiene lo siguiente:</p>
+<ol>
+<li>Dos rectas que pasan por el origen determinadas por los vectores $\boldsymbol{u}$ y $\boldsymbol{v}$.</li>
+<li>Se desea estimar la forma en que $\mathbf{dist}(\boldsymbol{u},\boldsymbol{v})=\mathbf{dist}(\boldsymbol{u},\boldsymbol{-v})$.</li>
+<li>Trabajaremos con los cuadrados de las distancias por conveniencia en nuestros cálculos.</li>
+</ol>
+<p><iframe src="https://www.geogebra.org/calculator/mtvka6kt" 
+    width="100%" 
+    height="600" 
+    scrolling="no" 
+    style="border:0px;" allowfullscreen></iframe> </p>
+<p><br></p>
+<h5 id="distancia-cuadratica-entre-boldsymbolu-y-boldsymbolv">Distancia cuadrática entre $\boldsymbol{u}$ y $\boldsymbol{v}$</h5>
+<p>
+<script type="math/tex; mode=display">[\mathbf{dist}(\boldsymbol{u},\boldsymbol{v})]^2=\left\Vert \boldsymbol{u}-\boldsymbol{v} \right\Vert^2</script>
+</p>
+<p>
+<script type="math/tex; mode=display">=(\boldsymbol{u}-\boldsymbol{v})\cdot(\boldsymbol{u}-\boldsymbol{v})</script>
+</p>
+<p>
+<script type="math/tex; mode=display">=\boldsymbol{u}\cdot(\boldsymbol{u}-\boldsymbol{v})-\boldsymbol{v}\cdot(\boldsymbol{u}-\boldsymbol{v})</script>
+</p>
+<p>
+<script type="math/tex; mode=display">=\boldsymbol{u}\cdot \boldsymbol{u} - \boldsymbol{u}\cdot\boldsymbol{v}-\boldsymbol{v}\cdot\boldsymbol{u}+\boldsymbol{v}\cdot\boldsymbol{v}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">=\left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2 - 2(\boldsymbol{u}\cdot\boldsymbol{v})</script>
+</p>
+<p><br></p>
+<h5 id="distancia-cuadratica-entre-boldsymbolu-y-boldsymbolv_1">Distancia cuadrática entre $\boldsymbol{u}$ y $-\boldsymbol{v}$</h5>
+<p>
+<script type="math/tex; mode=display">[\mathbf{dist}(\boldsymbol{u},\boldsymbol{-v})]^2=\left\Vert \boldsymbol{u}+\boldsymbol{v} \right\Vert^2</script>
+</p>
+<p>
+<script type="math/tex; mode=display">=\left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2 + 2(\boldsymbol{u}\cdot\boldsymbol{v})</script>
+</p>
+<p><br></p>
+<p>Como se mencionó al plantear el problema, se desea que se cumpla</p>
+<p>
+<script type="math/tex; mode=display">[\mathbf{dist}(\boldsymbol{u},\boldsymbol{v})]^2=[\mathbf{dist}(\boldsymbol{u},\boldsymbol{-v})]^2</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2 - 2(\boldsymbol{u}\cdot\boldsymbol{v})= \left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2 + 2(\boldsymbol{u}\cdot\boldsymbol{v})</script>
+</p>
+<p>
+<script type="math/tex; mode=display">- 2(\boldsymbol{u}\cdot\boldsymbol{v})= 2(\boldsymbol{u}\cdot\boldsymbol{v})</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}\cdot\boldsymbol{v}= 0</script>
+</p>
+<p><br></p>
+<p>Este resultado indica que la única forma en que $\mathbf{dist}(\boldsymbol{u},\boldsymbol{v})=\mathbf{dist}(\boldsymbol{u},\boldsymbol{-v})$ exista es cuando $\boldsymbol{u}\cdot\boldsymbol{v}= 0$, implicando que $\boldsymbol{u}$ y $\boldsymbol{v}$ son independientes uno de otro, y en consecuencia ortogonales.</p>
+<p><br></p>
+<h5 id="teorema-de-pitagoras">Teorema de Pitágoras</h5>
+<p>El Teorema de Pitágoras puede ser inferido de la expresión</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u}+\boldsymbol{v} \right\Vert^2=\left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2 + 2(\boldsymbol{u}\cdot\boldsymbol{v})</script>
+</p>
+<p>Si los vectores son ortogonales</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u}+\boldsymbol{v} \right\Vert^2=\left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2</script>
+</p>
+<p><br></p>
+<h5 id="angulo-entre-dos-vectores-no-ortogonales">Ángulo entre dos Vectores no Ortogonales</h5>
+<p>En esta sección encontraremos el ángulo sub-tendido por dos vectores que no son ortogonales. Para ello construiremos un triángulo a partir de los vectores $\boldsymbol{u}$ y $\boldsymbol{v}$.</p>
+<p><iframe src="https://www.geogebra.org/calculator/fghxqmfx" 
+    width="100%" 
+    height="600" 
+    scrolling="no" 
+    style="border:0px;" allowfullscreen></iframe> </p>
+<p><br></p>
+<p>Lo anterior comprueba que es posible aplicar la <strong>Ley de Cosenos</strong> al triángulo que se forma por los vectores $\boldsymbol{u}$, $\boldsymbol{v}$ y $\boldsymbol{u}-\boldsymbol{v}$ .</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u}-\boldsymbol{v} \right\Vert^2=\left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2 - 2\left\Vert \boldsymbol{u}\right\Vert\left\Vert \boldsymbol{v}\right\Vert\cos{\theta}</script>
+</p>
+<p>Siendo $\theta$ el ángulo sub-tendido entre $\boldsymbol{u}$ y $\boldsymbol{v}$. Anteriormente se encontró la siguiente expresión</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u}-\boldsymbol{v} \right\Vert^2=\left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2 - 2(\boldsymbol{u}\cdot\boldsymbol{v})</script>
+</p>
+<p>Al igualar ambas ecuaciones se obtiene</p>
+<p>
+<script type="math/tex; mode=display">\left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2 - 2(\boldsymbol{u}\cdot\boldsymbol{v})=\left\Vert \boldsymbol{u} \right\Vert^2 + \left\Vert \boldsymbol{v} \right\Vert^2 - 2\left\Vert \boldsymbol{u}\right\Vert\left\Vert \boldsymbol{v}\right\Vert\cos{\theta}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}\cdot\boldsymbol{v}=\left\Vert \boldsymbol{u}\right\Vert\left\Vert \boldsymbol{v}\right\Vert\cos{\theta}</script>
+</p>
+<p>Esta expresión puede ser interpretada de diversas formas, entre las que destacan:</p>
+<h5 id="proyeccion-de-un-vector-sobre-otro">Proyección de un vector sobre otro</h5>
+<p>Si se define a $\left\Vert \boldsymbol{u}\right\Vert\cos{\theta}$ como la proyección de $\boldsymbol{u}$ sobre la dirección de $\boldsymbol{v}$</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u}\cdot\boldsymbol{v}=\left\Vert \boldsymbol{u}\right\Vert\left\Vert \boldsymbol{v}\right\Vert\cos{\theta}</script>
+</p>
+<p>Define que tanto el vector $\boldsymbol{u}$ se proyecta sobre $\boldsymbol{v}$.</p>
+<p><br></p>
+<h5 id="angulos-entre-dos-vectores">Ángulos entre dos vectores</h5>
+<p>La expresión </p>
+<p>
+<script type="math/tex; mode=display">\theta=\arccos{\left(\frac{\boldsymbol{u}\cdot\boldsymbol{v}}{\left\Vert \boldsymbol{u}\right\Vert\left\Vert \boldsymbol{v}\right\Vert}\right)}</script>
+</p>
+<p>indica el ángulo más pequeño entre $\boldsymbol{u}$ y $\boldsymbol{v}$.</p>
+<p><br></p>
+<h5 id="similitud-entre-vectores">Similitud entre vectores</h5>
+<p>La expresión</p>
+<p>
+<script type="math/tex; mode=display">\cos{\theta}={\frac{\boldsymbol{u}\cdot\boldsymbol{v}}{\left\Vert \boldsymbol{u}\right\Vert\left\Vert \boldsymbol{v}\right\Vert}}</script>
+</p>
+<p>Aparte de indicar la relación del ángulo $\theta$, también indica una métrica de que tanto $\boldsymbol{u}$ y $\boldsymbol{v}$ se parecen entre sí. </p>
+<p><br></p>
+<h4 id="complementos-ortogonales">Complementos Ortogonales</h4>
+<p>Dado el sub-espacio $W$ en $\mathbb{R}^n$ podemos decir que un complemento ortogonal es el conjunto de todos los vectores $\boldsymbol{z}$ que son ortogonales a $W$. A este espacio lo denotamos como $W^\perp$.</p>
+<p>Observe que la recta $L$ es perpendicular a cada $\boldsymbol{w}$ en $W$, por lo que se pueden observar dos cosas:</p>
+<ul>
+<li>$L=W^\perp$</li>
+<li>$W=L^{\perp}$</li>
+</ul>
+<p><iframe src="https://www.geogebra.org/3d/zy9fbcjk" 
+    width="100%" 
+    height="600" 
+    scrolling="no" 
+    style="border:0px;" allowfullscreen></iframe> </p>
+<p>Algunas consideraciones interesantes:</p>
+<ol>
+<li>El complemento ortogonal del espacio fila de $A$ es el espacio nulo de $A$.</li>
+</ol>
+<p>$(\mathbf{Fila}A)^\perp=\mathbf{Nul}A$</p>
+<ol>
+<li>El complemento ortogonal del espacio columna de $A$ es el espacio nulo de $A^T$.</li>
+</ol>
+<p>$(\mathbf{Col}A)^\perp=\mathbf{Nul}A^T$</p>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>TAREA SECCIÓN 6.1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1, 3, 5, 7, 9, 14, 16, 17, 22, 24</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+        <script src="../../mathjaxhelper.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
