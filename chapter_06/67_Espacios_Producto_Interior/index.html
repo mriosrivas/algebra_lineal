@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>6. Ortogonalidad y Mínimos Cuadrados - Algebra Lineal</title>
+        <title>6.7 Espacios con Producto Interior - Algebra Lineal</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -164,7 +164,7 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">6. Ortogonalidad y Mínimos Cuadrados <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -193,6 +193,10 @@
 </li>
                                     
 <li>
+    <a href="./" class="dropdown-item active">6.7 Espacios con Producto Interior</a>
+</li>
+                                    
+<li>
     <a href="../68_Aplicaciones_Espacios_Producto_Interior/" class="dropdown-item">6.8 Aplicaciones de Espacios con Producto Interior</a>
 </li>
                                 </ul>
@@ -205,6 +209,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../66_Aplicaciones_Modelos_Lineales/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../68_Aplicaciones_Espacios_Producto_Interior/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -238,7 +252,7 @@
 
 <h1 id="6-ortogonalidad-y-minimos-cuadrados">6. Ortogonalidad y Mínimos Cuadrados</h1>
 <h2 id="67-espacios-con-producto-interior">6.7 Espacios con Producto Interior</h2>
-<p>El producto interior de una función que asocia un número real $\left&lt;\boldsymbol{u}, \boldsymbol{v} \right&gt;$ para cada para de vectores $\boldsymbol{u}, \boldsymbol{v} cumple con</p>
+<p>El producto interior de una función que asocia un número real $\left&lt;\boldsymbol{u}, \boldsymbol{v} \right&gt;$ para cada para de vectores $\boldsymbol{u}, \boldsymbol{v}$ cumple con</p>
 <ol>
 <li>
 <script type="math/tex; mode=display">\left<\boldsymbol{u}, \boldsymbol{v} \right>=\left<\boldsymbol{v}, \boldsymbol{u} \right></script>
@@ -255,7 +269,162 @@
 </ol>
 <p><br></p>
 <hr />
-<p><strong>Ejemplo 1:</strong> Considere que $V$ está en $\mathbb{P_2}$. Sean $\boldsymbol{p}(t)=12t^2$ y $\boldsymbol{q}(t)=2t-1$. Calcule $\left&lt;\boldsymbol{p}, \boldsymbol{q} \right&gt;$ y $\left&lt;\boldsymbol{q}, \boldsymbol{q} \right&gt;$ para $t_0=0$, $t_1=1/2$ y $t_2=1$.</p></div>
+<p><strong>Ejemplo 1:</strong> Considere que $V$ está en $\mathbb{P_2}$. Sean $\boldsymbol{p}(t)=12t^2$ y $\boldsymbol{q}(t)=2t-1$. Calcule $\left&lt;\boldsymbol{p}, \boldsymbol{q} \right&gt;$ y $\left&lt;\boldsymbol{q}, \boldsymbol{q} \right&gt;$ para $t_0=0$, $t_1=1/2$ y $t_2=1$.</p>
+<p>Para resolver este problema se puede observar que $\boldsymbol{p}$ y $\boldsymbol{q}$ serán dos vectores en $\mathbb{R^3}$ de la siguiente forma</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{p}=\left[\begin{array}{c} 0\\ 3\\ 12 \end{array}\right]\;\;\; \boldsymbol{q}=\left[\begin{array}{c} -1\\ 0\\ 1 \end{array}\right]</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\left<\boldsymbol{p}, \boldsymbol{q} \right> = 0 + 0 +12 =12</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\left<\boldsymbol{q}, \boldsymbol{q} \right> = 1 + 0 +1 =2</script>
+</p>
+<hr />
+<p><br></p>
+<h4 id="longitud-distancia-y-ortogonalidad">Longitud, Distancia y Ortogonalidad</h4>
+<p>Se pueden generalizar la <strong>longitud</strong> con el producto interior de la siguiente manera</p>
+<p>
+<script type="math/tex; mode=display">\left \Vert \boldsymbol{v} \right \Vert=\sqrt{\left<\boldsymbol{v}, \boldsymbol{v} \right>}</script>
+</p>
+<p><br></p>
+<p>La <strong>distancia</strong> está dada como</p>
+<p>
+<script type="math/tex; mode=display">\left \Vert \boldsymbol{u-v} \right \Vert=\sqrt{\left<\boldsymbol{u-v}, \boldsymbol{u-v} \right>}</script>
+</p>
+<p><br>La <strong>ortogonalidad</strong> se cumple con</p>
+<p>
+<script type="math/tex; mode=display">\left<\boldsymbol{u}, \boldsymbol{v} \right>=0</script>
+</p>
+<p><br></p>
+<h4 id="proceso-gram-schmidt">Proceso Gram-Schmidt</h4>
+<p>El proceso de Gram-Schmidt puede ser aplicado a polinomios $\mathbb{P_n}$, el siguiente ejemplo muestra la aplicación del mismo.</p>
+<hr />
+<p><strong>Ejemplo 2:</strong> Sea $P_4$ en $V$, es decir vectores de $5$ entradas, y $\mathbb{P_2}$ un sub-espacio de $V$. Obtenga una base ortogonal para $\mathbb{P_2}$ aplicando el proceso Gram-Shmidt a los polinomios $1$, $t$ y $t^2$.</p>
+<p>
+<script type="math/tex; mode=display">t = \left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right]</script>
+</p>
+<p>Se puede construir $V$ como</p>
+<p>
+<script type="math/tex; mode=display">V=Gen\{1, t,t^2\}</script>
+</p>
+<p>O vectorialemente</p>
+<p>
+<script type="math/tex; mode=display">V=Gen\left \{\boldsymbol{v_1},\boldsymbol{v_2},\boldsymbol{v_3} \right\} = Gen \left\{\left[\begin{array}{c} 1\\ 1\\ 1\\ 1\\ 1 \end{array}\right], \left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right],\left[\begin{array}{c} 4\\ 1\\ 0\\ 1\\ 4 \end{array}\right] \right\}</script>
+</p>
+<p>Aplicando el proceso Gram-Schmidt</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u_1} = \left[\begin{array}{c} 1\\ 1\\ 1\\ 1\\ 1 \end{array}\right]</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u_1} = \boldsymbol{p_1}(t)=1</script>
+</p>
+<p><br></p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u_2} = \left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right]-\frac{\left<\boldsymbol{v_2}, \boldsymbol{u_1} \right>}{\left<\boldsymbol{u_1}, \boldsymbol{u_1} \right>}\left[\begin{array}{c} 1\\ 1\\ 1\\ 1\\ 1 \end{array}\right]=\left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right]-\frac{0}{5}\left[\begin{array}{c} 1\\ 1\\ 1\\ 1\\ 1 \end{array}\right]=\left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right]</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u_2} = \boldsymbol{p_2}(t)=t</script>
+</p>
+<p><br></p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u_3} = \left[\begin{array}{c} 4\\ 1\\ 0\\ 1\\ 4 \end{array}\right]-\frac{\left<\boldsymbol{v_3}, \boldsymbol{u_1} \right>}{\left<\boldsymbol{u_1}, \boldsymbol{u_1} \right>}\left[\begin{array}{c} 1\\ 1\\ 1\\ 1\\ 1 \end{array}\right]-\frac{\left<\boldsymbol{v_3}, \boldsymbol{u_2} \right>}{\left<\boldsymbol{u_2}, \boldsymbol{u_2} \right>}\left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right]=\left[\begin{array}{c} 4\\ 1\\ 0\\ 1\\ 4 \end{array}\right]-\frac{10}{5}\left[\begin{array}{c} 1\\ 1\\ 1\\ 1\\ 1 \end{array}\right]-\frac{0}{10}\left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right]=\left[\begin{array}{c} 2\\ -1\\ -2\\ -1\\ 2 \end{array}\right]</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{u_3} = \boldsymbol{p_3}(t)-2\boldsymbol{p_1}(t)=t^2-2</script>
+</p>
+<p><br></p>
+<p>Por lo que la base ortogonal para $V$ será</p>
+<p>
+<script type="math/tex; mode=display">V=Gen\left \{\boldsymbol{u_1},\boldsymbol{u_2},\boldsymbol{u_3} \right\} = Gen \left\{\left[\begin{array}{c} 1\\ 1\\ 1\\ 1\\ 1 \end{array}\right], \left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right],\left[\begin{array}{c} 2\\ -1\\ -2\\ -1\\ 2 \end{array}\right] \right\}</script>
+</p>
+<p>Observe que la base de $V$ puede obtenerse también como un conjunto de polinomios que cumplen con ser</p>
+<p>
+<script type="math/tex; mode=display">V=Gen\{1, t,t^2-2\}</script>
+</p>
+<p><br></p>
+<h4 id="mejor-aproximacion-en-espacios-con-producto-interior">Mejor Aproximación en Espacios con Producto Interior</h4>
+<p>Un polinomio $\boldsymbol{p}$ en $\mathbb{P_k}$ puede ser aproximado a otro polinomio en $\mathbb{P_n}$ si $\boldsymbol{p}$ se proyecta en $\mathbb{P_n}$.</p>
+<p><br></p>
+<hr />
+<p><strong>Ejemplo 3:</strong> Determine la mejor aproximación a $\boldsymbol{p}(t)=5-\frac{1}{2}t^4$ mediante polinomios de $\mathbb{P_2}$.</p>
+<p>Del ejemplo anterior se obtuvo una base para un polinomio de $\mathbb{P_2}$ dado por</p>
+<p>
+<script type="math/tex; mode=display">V= Gen \left\{\left[\begin{array}{c} 1\\ 1\\ 1\\ 1\\ 1 \end{array}\right], \left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right],\left[\begin{array}{c} 2\\ -1\\ -2\\ -1\\ 2 \end{array}\right] \right\}=Gen\{1, t,t^2-2\}</script>
+</p>
+<p>Si se evalúa $\boldsymbol{p}(t)$ en $t$</p>
+<p>
+<script type="math/tex; mode=display">t = \left[\begin{array}{c} -2\\ -1\\ 0\\ 1\\ 2 \end{array}\right]</script>
+</p>
+<p>se obtiene</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{p}=\left[\begin{array}{c} -3\\ \frac{9}{2}\\ 5\\ \frac{9}{2}\\ -3 \end{array}\right]</script>
+</p>
+<p>La proyección de $\boldsymbol{p}$ en $V$ será</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{\hat{p}}=\frac{\left<\boldsymbol{p}, \boldsymbol{u_1} \right>}{\left<\boldsymbol{u_1}, \boldsymbol{u_1} \right>}\boldsymbol{u_1}+\frac{\left<\boldsymbol{p}, \boldsymbol{u_2} \right>}{\left<\boldsymbol{u_2}, \boldsymbol{u_2} \right>}\boldsymbol{u_2}+\frac{\left<\boldsymbol{p}, \boldsymbol{u_3} \right>}{\left<\boldsymbol{u_3}, \boldsymbol{u_3} \right>}\boldsymbol{u_3}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{\hat{p}}=\frac{8}{5}\boldsymbol{u_1}+\frac{0}{10}\boldsymbol{u_2}-\frac{31}{14}\boldsymbol{u_3}</script>
+</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{\hat{p}}=\frac{8}{5}-\frac{31}{14}(t^2-2)</script>
+</p>
+<hr />
+<p><br></p>
+<h4 id="producto-interior-para-cab">Producto Interior para $C[a,b]$</h4>
+<p>El producto interior para funciones continuas $\boldsymbol{p}$ y $\boldsymbol{q}$ está dado como</p>
+<p>
+<script type="math/tex; mode=display">\left<\boldsymbol{p}, \boldsymbol{q} \right>=\frac{1}{b-a}\int_{a}^{b}p(t)q(t)dt</script>
+</p>
+<p><br></p>
+<hr />
+<p><strong>Ejemplo 4:</strong> Sea $V$ el espacio $C[0,1]$ y $W$ el sub-espacio generado por los polinomios</p>
+<p>
+<script type="math/tex; mode=display">\boldsymbol{p_1}(t)=1 \;\;\;  \boldsymbol{p_2}(t)=2t-1 \;\;\; \boldsymbol{p_3}(t)=12t^2</script>
+</p>
+<p>Utilice el proceso Gram-Schmidt y encuentre una base ortogonal para $W$.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<script type="math/tex; mode=display">\boldsymbol{u_1}=\boldsymbol{p_1}=1</script>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>
+<script type="math/tex; mode=display">\boldsymbol{u_2}=\boldsymbol{p_2}-\frac{\left<\boldsymbol{p_2}, \boldsymbol{u_1} \right>}{\left<\boldsymbol{u_1}, \boldsymbol{u_1} \right>}\boldsymbol{u_1}</script>
+<script type="math/tex; mode=display">=\boldsymbol{p_2}-0\boldsymbol{u_1}</script>
+<script type="math/tex; mode=display">=2t-1</script>
+</td>
+<td>
+<script type="math/tex; mode=display">\left<\boldsymbol{p_2}, \boldsymbol{u_1} \right>=\int_{0}^{1}(2t-1)(1)dt=0</script>
+</td>
+</tr>
+<tr>
+<td>
+<script type="math/tex; mode=display">\boldsymbol{u_3}=\boldsymbol{p_3}-\frac{\left<\boldsymbol{p_3}, \boldsymbol{u_1} \right>}{\left<\boldsymbol{u_1}, \boldsymbol{u_1} \right>}\boldsymbol{u_1}-\frac{\left<\boldsymbol{p_3}, \boldsymbol{u_2} \right>}{\left<\boldsymbol{u_2}, \boldsymbol{u_2} \right>}\boldsymbol{u_2}</script>
+<script type="math/tex; mode=display"> = \boldsymbol{p_3} - \frac{4}{1}\boldsymbol{u_1}-\frac{2}{1/3}\boldsymbol{u_2}</script>
+<script type="math/tex; mode=display">= \boldsymbol{p_3} - 4\boldsymbol{u_1}-6\boldsymbol{u_2}</script>
+<script type="math/tex; mode=display">=(12t^2)-4(1)-6(2t-1)</script>
+<script type="math/tex; mode=display">=12t^2-12t+2</script>
+</td>
+<td>
+<script type="math/tex; mode=display">\left<\boldsymbol{p_3}, \boldsymbol{u_1} \right>=\int_{0}^{1}(12t^2)(1)dt=4</script>
+<script type="math/tex; mode=display">\left<\boldsymbol{u_1}, \boldsymbol{u_1} \right>=\int_{0}^{1}(1)(1)dt=1</script>
+<script type="math/tex; mode=display">\left<\boldsymbol{p_3}, \boldsymbol{u_2} \right>=\int_{0}^{1}(12t^2)(2t-1)dt=2</script>
+<script type="math/tex; mode=display">\left<\boldsymbol{u_2}, \boldsymbol{u_2} \right>=\int_{0}^{1}(2t-1)(2t-1)dt=\frac{1}{3}</script>
+</td>
+</tr>
+</tbody>
+</table></div>
             </div>
         </div>
 
